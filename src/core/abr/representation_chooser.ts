@@ -153,8 +153,7 @@ function getConcernedRequest(
       duration: chunkDuration,
     } = request;
 
-    // TODO review this
-    if (Math.abs(segmentPosition - chunkTime) < chunkDuration) {
+    if ((chunkTime - segmentPosition) < chunkDuration) {
       return request;
     }
   }
