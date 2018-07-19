@@ -256,11 +256,7 @@ function requestTakesTooMuchTime(
   elapsedTimeOnRequest : number,
   chunkDuration : number,
   playableRemainingTime: number,
-  lastProgressEvent: {
-    size: number;
-    timestamp: number;
-    totalSize: number;
-  } | null,
+  lastProgressEvent: IProgressEventValue | null,
   bandwidthEstimate?: number
 ) {
   if (lastProgressEvent != null && bandwidthEstimate) {
